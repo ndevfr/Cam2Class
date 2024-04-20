@@ -1,0 +1,350 @@
+html,
+* {
+  font-family: Verdana;
+  touch-action: manipulation;
+}
+body {
+  text-align: center;
+  background: #ffffff;
+  color: #7c1039;
+  margin: 10px auto;
+  touch-action: manipulation;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+a {
+  color: #7c1039;
+}
+
+#logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+#infos-screen{
+  position:absolute;
+  top:10px;
+  left:0;
+  right:0;
+  user-select:none;
+}
+
+#back-connect-screen {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 9999999998;
+}
+
+#connect-screen {
+  background: white;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 10px;
+  z-index: 9999999999;
+}
+
+.capture {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: calc(100% - 40px);
+  height: auto;
+}
+
+.answerarea {
+  border: dotted 1px #7c1039;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+.dotarea {
+  border: dotted 1px #7c1039;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.colorarea {
+  border: none;
+  background: #7c1039;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.colorarea h2 {
+  margin: 0;
+}
+
+.colorarea img {
+  max-height: min(20vh, 20vw);
+  width: auto;
+}
+
+.button {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  background: #7c1039;
+  color: white;
+  width: 260px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#screen_code {
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+#screen_id {
+  font-weight: bold;
+}
+
+#qrcode {
+  margin: 10px;
+}
+
+#qrscan {
+  width: 276px;
+  height: 276px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  background: #7c1039;
+  background-image: url("../images/camerazone.png");
+  background-size: contain;
+  border: solid 2px #7c1039;
+  border-radius: 10px 10px 0 0;
+}
+
+#qrscanlabel {
+  display: block;
+  width: 260px;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+  background: #7c1039;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+#qrscan_group {
+  display: inline-block;
+  position: relative;
+}
+
+#qrscan_on {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+#outputMessage {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 3px 0;
+}
+
+#videoC {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#photoC {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#canvasC {
+  display: none;
+}
+
+.camera {
+  display: inline-block;
+  margin: 10px 30px;
+  position: relative;
+}
+
+.output {
+  display: inline-block;
+  margin: 10px 30px;
+  position: relative;
+}
+
+#output-options {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+#startbutton {
+  display: inline-block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 20px;
+  cursor: pointer;
+  left: calc(50% - 30px);
+  right: calc(50% - 30px);
+}
+
+#retakebtn,
+#sendbtn,
+#savebtn {
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+#clearbutton {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+#randombutton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#homebutton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+#fullscreenbutton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+#footer_screen {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  user-select:none;
+}
+
+.contentarea {
+  font-size: 16px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  width: 760px;
+}
+
+label.cameraButton {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  background: #7c1039;
+  color: white;
+  width: 260px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* This is the part that actually hides the 'Choose file' text box for camera inputs */
+label.cameraButton input[accept*="camera"] {
+  display: none;
+  cursor: pointer;
+}
+
+.pane {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  overflow: clip;
+  cursor: move;
+  user-select: none;
+}
+
+.pane .content {
+  position: relative;
+  background-color: white;
+}
+
+.pane .content img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-user-drag: none;
+  user-drag: none;
+  margin: auto;
+}
+
+.pane .move  {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.pane .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/closebtn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.pane .corner {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/resizebtn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+  cursor: nwse-resize;
+}

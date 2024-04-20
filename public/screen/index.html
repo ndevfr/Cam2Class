@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cam2Class">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<link rel="icon" type="image/png" href="../images/icon-screen.png" />
+<link rel="apple-touch-icon" href="../images/icon-screen.png" />
+<meta name="robots" content="noindex">
+<title>Cam2Class Screen</title>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="../js/vendor/qrcode.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/style-2.0.0.css" />
+<meta charset="UTF-8" />
+</head>
+
+<body style="overflow:hidden;width:100vw;height:100vh;">
+<center>
+	<div id="back-connect-screen">
+		<div id="homebutton" onclick="go_home(false);"><img src="../images/homebtn.png" width="60" height="60" /></div>
+		<div id="clearbutton" onclick="clear_screen(false);"><img src="../images/clearbtn.png" width="60" height="60" /></div>
+		<div id="randombutton" onclick="reset_screen(true);"><img src="../images/randombtn.png" width="60" height="60" /></div>
+	</div>
+	<div id="infos-screen"><img src="../images/logo.png" onclick="go_home(false);" id="logo" /><div><span id="screen_id">######</span> <span id="status">(non connecté)</span> <a href="javascript:void(0);" onclick="reset_screen();" id="resetlink">Réinitialiser écran</a></div></div>
+	<div id="connect-screen">
+		<div id="code">
+			Code PIN pour diffuser sur cet écran :
+			<div id="screen_code">######</div>
+			<div id="qrcode"></div>
+		</div>
+	</div>
+	<div id="display">
+		<div id="panes"></div>
+	</div>
+	<div id="footer_screen">
+		<div id="version">Version 2.0.0</div>
+	</div>
+</center>
+<script src="../js/commun-2.0.0.js"></script>
+<script src="../js/screen-2.0.0.js"></script>
+</body>
+</html>
