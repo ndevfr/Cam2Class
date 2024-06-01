@@ -1,70 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Cam2Class">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Cam2Class" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-<link rel="icon" type="image/png" href="../images/icon-scan.png" />
-<link rel="apple-touch-icon" href="../images/icon-scan.png" />
-<meta name="robots" content="noindex">
-<title>Cam2Class Scan</title>
-<script src="/socket.io/socket.io.js"></script>
-<script type="text/javascript" src="../js/vendor/jquery.min.js"></script>
-<script type="text/javascript" src="../js/vendor/jsqr.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/style-2.0.0.css" />
-<meta charset="UTF-8" />
-</head>
+    <link rel="icon" type="image/png" href="../images/icon-scan.png" />
+    <link rel="apple-touch-icon" href="../images/icon-scan.png" />
+    <meta name="robots" content="noindex" />
+    <title>Cam2Class Scan</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="../js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/jsqr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style-2.0.0.css" />
+    <meta charset="UTF-8" />
+  </head>
 
-<body>
-<center>
-	<img src="../images/logo.png" onclick="go_home(false);" id="logo" />
-	<div><span id="status">(non connecté)</span> <a href="javascript:void(0);" onclick="if(confirm('Souhaitez-vous vraiment réinitialiser cet écran ?')){reset_interface();}" id="resetlink">Réinitialiser caméra</a></div>
-	<div id="connect" class="dotarea">
-		<h2>Rejoindre un écran</h2>
-		<div id="loadingMessage" hidden="">⌛ Chargement de la vidéo...</div>
-		<div id="qrscan_group">
-			<div id="qrscan"><canvas id="canvas" width="280" height="280"></canvas></div>
-			<div id="qrscanlabel">Scanner le code PIN</div>
-			<div id="qrscan_on"></div>
-			<div id="outputMessage" style="display:none"></div>
-		</div>
-		<div>ou</div>
-		<div id="joinbutton" class="button" onclick="promptcode();">Saisir le code PIN</div>
-		<input type="hidden" id="C2C-code" value="" onchange="joinscreen(this.value);" />
-	</div>
-	<div id="shot">
-		<div id="caminfos"></div>
-		<div class="camera" id="camera">
-			<video id="videoC" playsinline>Le stream video n'est pas lancé.</video>
-			<div id="startbutton" onclick="photo_take_picture();"><img src="../images/photobtn.png" width="60" height="60" /></div>
-			<div id="fullscreenbutton" onclick="toggle_fullscreen();"><img src="../images/fullscreenbtn.png" width="36" height="36" /></div> 
-		</div>
-		<div class="output" id="output">
-			<img id="photoC" alt="The screen capture will appear in this box." style="display:none;">
-			<div id="output-options" style="display:none;">
-				<div id="retakebtn" onclick="retake_photo();"><img src="../images/retakebtn.png" width="60" height="60" title="Prendre une autre photo" /></div>
-				<div id="sendbtn" onclick="send_photo();"><img src="../images/sendbtn.png" width="60" height="60" title="Envoyer la photo" /></div>
-			</div>
-		</div>
-		<div>ou</div>
-		<label class="cameraButton">Utiliser une autre photo
-			<input id="inputimg" type="file" accept="image/*;capture=camera">
-		</label>
-	</div>
-	<div id="gallery">
-	</div>
-	<div id="magicscan"></div>
-	<canvas id="canvasC"></canvas>
-	<div id="footer_camera">
-		<div id="version">Version 2.0.0</div>
-	</div>
-</center>
-<script src="../js/commun-2.0.0.js"></script>
-<script src="../js/takephoto-2.0.0.js"></script>
-<script src="../js/camera-2.0.0.js"></script>
-<script src="../js/scanqrcode-2.0.0.js"></script>
-</body>
+  <body>
+    <center>
+      <img src="../images/logo.png" onclick="go_home(false);" id="logo" />
+      <div>
+        <span id="status">(non connecté)</span>
+        <a
+          href="javascript:void(0);"
+          onclick="if(confirm('Souhaitez-vous vraiment réinitialiser cet écran ?')){reset_interface();}"
+          id="resetlink"
+          >Réinitialiser caméra</a
+        >
+      </div>
+      <div id="connect" class="dotarea">
+        <h2>Rejoindre un écran</h2>
+        <div id="loadingMessage" hidden="">⌛ Chargement de la vidéo...</div>
+        <div id="qrscan_group">
+          <div id="qrscan">
+            <canvas id="canvas" width="280" height="280"></canvas>
+          </div>
+          <div id="qrscanlabel">Scanner le code PIN</div>
+          <div id="qrscan_on"></div>
+          <div id="outputMessage" style="display: none"></div>
+        </div>
+        <div>ou</div>
+        <div id="joinbutton" class="button" onclick="promptcode();">
+          Saisir le code PIN
+        </div>
+        <input
+          type="hidden"
+          id="C2C-code"
+          value=""
+          onchange="joinscreen(this.value);"
+        />
+      </div>
+      <div id="shot">
+        <div id="caminfos"></div>
+        <div class="camera" id="camera">
+          <video id="videoC" playsinline>
+            Le stream video n'est pas lancé.
+          </video>
+          <div id="startbutton" onclick="photo_take_picture();">
+            <img src="../images/photobtn.png" width="60" height="60" />
+          </div>
+          <div id="fullscreenbutton" onclick="toggle_fullscreen();">
+            <img src="../images/fullscreenbtn.png" width="36" height="36" />
+          </div>
+        </div>
+        <div class="output" id="output">
+          <img
+            id="photoC"
+            alt="The screen capture will appear in this box."
+            style="display: none"
+          />
+          <div id="output-options" style="display: none">
+            <div id="retakebtn" onclick="retake_photo();">
+              <img
+                src="../images/retakebtn.png"
+                width="60"
+                height="60"
+                title="Prendre une autre photo"
+              />
+            </div>
+            <div id="sendbtn" onclick="send_photo();">
+              <img
+                src="../images/sendbtn.png"
+                width="60"
+                height="60"
+                title="Envoyer la photo"
+              />
+            </div>
+          </div>
+        </div>
+        <div>ou</div>
+        <label class="cameraButton"
+          >Utiliser une autre photo
+          <input id="inputimg" type="file" accept="image/*;capture=camera" />
+        </label>
+      </div>
+      <div id="gallery"></div>
+      <div id="magicscan"></div>
+      <canvas id="canvasC"></canvas>
+      <div id="footer_camera">
+        <div id="version">Version 2.0.0</div>
+      </div>
+    </center>
+    <script src="../js/commun-2.0.1.js"></script>
+    <script src="../js/takephoto-2.0.0.js"></script>
+    <script src="../js/camera-2.0.0.js"></script>
+    <script src="../js/scanqrcode-2.0.1.js"></script>
+  </body>
 </html>

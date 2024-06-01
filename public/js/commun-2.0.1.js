@@ -1,13 +1,13 @@
 var socket = io.connect();
 
-const home = "https://cam2class.desmaths.fr/";
+const home = "https://cam2class.ndev.app/";
 const debug = false;
 
 function go_home(cond) {
-  if(!cond){
+  if (!cond) {
     cond = confirm("Souhaitez-vous vraiment retourner à l'accueil ?");
   }
-  if(cond){
+  if (cond) {
     window.location.href = home;
   }
 }
