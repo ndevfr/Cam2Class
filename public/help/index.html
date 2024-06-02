@@ -1,63 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Cam2Class">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Cam2Class" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-<link rel="icon" type="image/png" href="../images/icon.png" />
-<link rel="apple-touch-icon" href="../images/icon.png" />
-<meta name="robots" content="noindex">
-<title>Cam2Class Help</title>
-<link rel="stylesheet" type="text/css" href="../css/style-2.0.0.css" />
-<meta charset="UTF-8" />
-</head>
-<body>
-<center>
-	<a href="/"><img src="../images/logo.png" id="logo" /></a>
-	<div><strong>Guide d'utilisation</strong></div>
-</center>
-<div class="answerarea"><h3>Accès rapide</h3>
-<ul>
-	<li><a href="#utilite">Quelle est l'utilité de cette application ?</a></li>
-	<li><a href="#ecran">1. Utiliser un appareil comme écran</a></li>
-	<li><a href="#camera">2. Utiliser un appareil comme appareil-photo</a></li>
-</ul>
-</div>
-<h1 id="utilite">Quelle est l'utilité de cette application ?</h1>
-<div class="answerarea"><p>Cette application permet de relier deux appareils via internet de façon très simple grâce à un code PIN ou un QR-code.</p>
-<ul>
-	<li>Un premier appareil sert d'écran de projection pour y afficher les images envoyées par le second appareil. Idéalement, c'est l'ordinateur qui est relié au vidéo-projecteur.</li>
-	<li>Le second appareil permet de prendre des photos ou d'utiliser celles déjà sur l'appareil pour les envoyer sur le second appareil (après contrôle visuel pour éviter toute erreur de partage). Idéalement, c'est le smartphone du professeur (ou du présentateur).</li>
-</ul>
-<img src="cam2class-demo.jpg" class="capture" alt="Demo de l'application Cam2Class" />
-<p>Les images envoyées à l'écran ne sont stockées sur aucun serveur et elles transitent directement d'un appareil à l'autre. Aucune sauvegarde n'existe et elles deviennent inaccessibles lors du rechargement de la page écran. Si vous souhaitez réutiliser une image ultérieurement, pensez à la sauvegarder sur votre appareil.</p>
-</div>
-<h1 id="ecran">1. Utiliser un appareil comme écran</h1>
-<div class="answerarea"><p>Pour utiliser Cam2Class, vous devez d'abord ouvrir une page en tant qu'écran sur l'appareil de projection. Depuis la page d'accueil, il suffit de cliquer sur le bouton "Utiliser cet appareil comme écran". On arrive alors sur la page ci-dessous qui affiche le code PIN (et que le QR-code associé) à utiliser pour s'y connecter.</p>
-<img src="cam2class-screen.jpg" class="capture" alt="Page Ecran de l'application Cam2Class" />
-<p>Sur cet écran, on retrouve trois boutons disposés dans les coins de la page :</p>
-<ul>
-	<li>En haut à droite, le bouton "Accueil" permet de retourner sur la page d'accueil.</li>
-	<li>En bas à gauche, le bouton "Effacer" permet d'effacer tous les contenus déjà reçus et encore affichés à l'écran (s'il y en a).</li>
-	<li>En bas à droite, le bouton "Générer" permet de générer un nouveau code PIN (et QR-code associé) pour rejoindre cet écran.</li>
-</ul>
-<p>Une fois qu'un appareil s'est connecté (en utilisant le code PIN ou le QR-code associé), l'écran est prêt à accueillir les images envoyées. Il est possible de déplacer les images sur l'écran (par glisser-déposer), d'agrandir ou de diminuer la taille (en utilisant le coin inférieur droit) ou de les supprimer (en cliquant sur le bouton en haut à droite). Chaque nouvelle image envoyée arrive au centre de l'écran, pas dessus toutes les autres. Chaque action sur une image la fait passer au premier plan par rapport aux autres.</p>
-<img src="cam2class-screen2.jpg" class="capture" alt="Page Ecran de l'application Cam2Class" />
-<p>Le lien "Réinitialiser l'écran" permet de déconnecter l'appareil d'envoi et de générer un nouveau code PIN d'accès (par exemple pour changer d'appareil d'envoi ou en cas de problème de connexion) sans supprimer les différentes images reçues de l'écran.</p></div>
-<h1 id="camera">2. Utiliser un appareil comme appareil-photo</h1>
-<div class="answerarea"><p>Une fois qu'un appareil a été configuré pour fonctionner en tant qu'écran, il est possible de le rejoindre de deux façons différentes. Il faut d'abord se rendre sur la page d'accueil de l'application puis cliquer sur le bouton "Utiliser cet appareil comme appareil-photo" (vous pourrez d'ailleurs ajouter la page correspondante sur votre écran d'accueil pour y revenir plus rapidement par la suite). Deux choix sont proposés pour vous connecter à l'écran :</p>
-<ul>
-	<li>soit en activant la caméra du téléphone en cliquant dans la zone prévue à cet effet pour scanner directement le QR-code (qui contient le code PIN) ;</li>
-	<li>soit en cliquant sur le bouton "Saisir le code PIN" puis en le copiant directement dans la boite de dialogue qui s'ouvre à cet effet.</li>
-</ul>
-<img src="cam2class-camera.jpg" class="capture" alt="Page Ecran de l'application Cam2Class" />
-<p>Une fois connecté à l'écran (appareil situé à gauche de la capture ci-dessous), il est possible de prendre une photo directement depuis la page (en autorisant l'accès à la caméra puis en cliquant sur le bouton de prise de vue (en bas au centre) mais il est aussi possible de cliquer sur le bouton "Utiliser une autre photo" pour accéder à la galerie d'images de l'appareil (ou utiliser l'appareil photo natif).</p>
-<img src="cam2class-camera2.jpg" class="capture" alt="Page Ecran de l'application Cam2Class" />
-<p>Lorsque la photo est prise ou choisie (appareil situé à droite de la capture ci-dessus), il est possible de l'envoyer à l'écran (bouton de doite) ou tout simplement d'annuler cette prise de vue pour revenir à l'appareil photo. Lorsque la photo a été envoyée à l'écran, elle disparait pour laisser place de nouveau à l'appareil photo.</p>
-<p>Lors du chargement de la page (par exemple suite à une actualisation), l'application essaie automatiquement de rejoindre l'écran précédemment utilisé s'il est encore disponible. Le lien "Réinitialiser caméra" permet de se déconnecter de l'écran actuel pour se connecter à un autre écran (cela peut-être aussi utile s'il y a un problème de liaison entre les deux appareils).</p>
-</div>
-</body>
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+    <link rel="apple-touch-icon" href="../images/icon.png" />
+    <meta name="robots" content="noindex" />
+    <title>Cam2Class Help</title>
+    <link rel="stylesheet" type="text/css" href="../css/style-2.0.1.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <center>
+      <a href="/"><img src="../images/logo.png" id="logo" /></a>
+      <div><strong>Guide d'utilisation</strong></div>
+    </center>
+    <div class="answerarea">
+      <h3>Accès rapide</h3>
+      <ul>
+        <li>
+          <a href="#utilite">Quelle est l'utilité de cette application ?</a>
+        </li>
+        <li><a href="#ecran">1. Utiliser un appareil comme écran</a></li>
+        <li>
+          <a href="#camera">2. Utiliser un appareil comme appareil-photo</a>
+        </li>
+      </ul>
+    </div>
+    <h1 id="utilite">Quelle est l'utilité de cette application ?</h1>
+    <div class="answerarea">
+      <p>
+        Cette application permet de relier deux appareils via internet de façon
+        très simple grâce à un code PIN ou un QR-code.
+      </p>
+      <ul>
+        <li>
+          Un premier appareil sert d'écran de projection pour y afficher les
+          images envoyées par le second appareil. Idéalement, c'est l'ordinateur
+          qui est relié au vidéo-projecteur.
+        </li>
+        <li>
+          Le second appareil permet de prendre des photos ou d'utiliser celles
+          déjà sur l'appareil pour les envoyer sur le second appareil (après
+          contrôle visuel pour éviter toute erreur de partage). Idéalement,
+          c'est le smartphone du professeur (ou du présentateur).
+        </li>
+      </ul>
+      <img
+        src="cam2class-demo.jpg"
+        class="capture"
+        alt="Demo de l'application Cam2Class"
+      />
+      <p>
+        Les images envoyées à l'écran ne sont stockées sur aucun serveur et
+        elles transitent directement d'un appareil à l'autre. Aucune sauvegarde
+        n'existe et elles deviennent inaccessibles lors du rechargement de la
+        page écran. Si vous souhaitez réutiliser une image ultérieurement,
+        pensez à la sauvegarder sur votre appareil.
+      </p>
+    </div>
+    <h1 id="ecran">1. Utiliser un appareil comme écran</h1>
+    <div class="answerarea">
+      <p>
+        Pour utiliser Cam2Class, vous devez d'abord ouvrir une page en tant
+        qu'écran sur l'appareil de projection. Depuis la page d'accueil, il
+        suffit de cliquer sur le bouton "Utiliser cet appareil comme écran". On
+        arrive alors sur la page ci-dessous qui affiche le code PIN (et que le
+        QR-code associé) à utiliser pour s'y connecter.
+      </p>
+      <img
+        src="cam2class-screen.jpg"
+        class="capture"
+        alt="Page Ecran de l'application Cam2Class"
+      />
+      <p>
+        Sur cet écran, on retrouve trois boutons disposés dans les coins de la
+        page :
+      </p>
+      <ul>
+        <li>
+          En haut à droite, le bouton "Accueil" permet de retourner sur la page
+          d'accueil.
+        </li>
+        <li>
+          En bas à gauche, le bouton "Effacer" permet d'effacer tous les
+          contenus déjà reçus et encore affichés à l'écran (s'il y en a).
+        </li>
+        <li>
+          En bas à droite, le bouton "Générer" permet de générer un nouveau code
+          PIN (et QR-code associé) pour rejoindre cet écran.
+        </li>
+      </ul>
+      <p>
+        Une fois qu'un appareil s'est connecté (en utilisant le code PIN ou le
+        QR-code associé), l'écran est prêt à accueillir les images envoyées. Il
+        est possible de déplacer les images sur l'écran (par glisser-déposer),
+        d'agrandir ou de diminuer la taille (en utilisant le coin inférieur
+        droit) ou de les supprimer (en cliquant sur le bouton en haut à droite).
+        Chaque nouvelle image envoyée arrive au centre de l'écran, pas dessus
+        toutes les autres. Chaque action sur une image la fait passer au premier
+        plan par rapport aux autres.
+      </p>
+      <img
+        src="cam2class-screen2.jpg"
+        class="capture"
+        alt="Page Ecran de l'application Cam2Class"
+      />
+      <p>
+        Le lien "Réinitialiser l'écran" permet de déconnecter l'appareil d'envoi
+        et de générer un nouveau code PIN d'accès (par exemple pour changer
+        d'appareil d'envoi ou en cas de problème de connexion) sans supprimer
+        les différentes images reçues de l'écran.
+      </p>
+    </div>
+    <h1 id="camera">2. Utiliser un appareil comme appareil-photo</h1>
+    <div class="answerarea">
+      <p>
+        Une fois qu'un appareil a été configuré pour fonctionner en tant
+        qu'écran, il est possible de le rejoindre de deux façons différentes. Il
+        faut d'abord se rendre sur la page d'accueil de l'application puis
+        cliquer sur le bouton "Utiliser cet appareil comme appareil-photo" (vous
+        pourrez d'ailleurs ajouter la page correspondante sur votre écran
+        d'accueil pour y revenir plus rapidement par la suite). Deux choix sont
+        proposés pour vous connecter à l'écran :
+      </p>
+      <ul>
+        <li>
+          soit en activant la caméra du téléphone en cliquant dans la zone
+          prévue à cet effet pour scanner directement le QR-code (qui contient
+          le code PIN) ;
+        </li>
+        <li>
+          soit en cliquant sur le bouton "Saisir le code PIN" puis en le copiant
+          directement dans la boite de dialogue qui s'ouvre à cet effet.
+        </li>
+      </ul>
+      <img
+        src="cam2class-camera.jpg"
+        class="capture"
+        alt="Page Ecran de l'application Cam2Class"
+      />
+      <p>
+        Une fois connecté à l'écran (appareil situé à gauche de la capture
+        ci-dessous), il est possible de prendre une photo directement depuis la
+        page (en autorisant l'accès à la caméra puis en cliquant sur le bouton
+        de prise de vue (en bas au centre) mais il est aussi possible de cliquer
+        sur le bouton "Utiliser une autre photo" pour accéder à la galerie
+        d'images de l'appareil (ou utiliser l'appareil photo natif).
+      </p>
+      <img
+        src="cam2class-camera2.jpg"
+        class="capture"
+        alt="Page Ecran de l'application Cam2Class"
+      />
+      <p>
+        Lorsque la photo est prise ou choisie (appareil situé à droite de la
+        capture ci-dessus), il est possible de l'envoyer à l'écran (bouton de
+        doite) ou tout simplement d'annuler cette prise de vue pour revenir à
+        l'appareil photo. Lorsque la photo a été envoyée à l'écran, elle
+        disparait pour laisser place de nouveau à l'appareil photo.
+      </p>
+      <p>
+        Lors du chargement de la page (par exemple suite à une actualisation),
+        l'application essaie automatiquement de rejoindre l'écran précédemment
+        utilisé s'il est encore disponible. Le lien "Réinitialiser caméra"
+        permet de se déconnecter de l'écran actuel pour se connecter à un autre
+        écran (cela peut-être aussi utile s'il y a un problème de liaison entre
+        les deux appareils).
+      </p>
+    </div>
+  </body>
 </html>

@@ -1,13 +1,13 @@
 {
-  "name": "cam2class-v2-app",
-  "version": "1.0.0",
+  "name": "cam2class-app",
+  "version": "2.0.1",
   "description": "Send photos to screen easily",
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.17.1",
     "http": "^0.0.1-security",
     "path": "^0.12.7",
-    "socket.io": "^4.7.5"
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   }
 }
